@@ -113,7 +113,7 @@ struct Home : View {
                     
                     Text("Continue Watching")
                     
-                    
+                    bottomView()
                     
                 }
                 
@@ -139,14 +139,20 @@ struct bottomView : View {
                         VStack(spacing: 0){
                             
                             Image(i.image)
-                            Button(action: {
+                            
+                            HStack{
                                 
+                                Spacer()
                                 
-                            }) {
-                                
-                                Image("play").renderingMode(.original).resizable().frame(width: 25, height: 25)
-                                
-                            }.padding(.top, -12)
+                                Button(action: {
+                                    
+                                    
+                                }) {
+                                    
+                                    Image("play").renderingMode(.original).resizable().frame(width: 25, height: 25)
+                                    
+                                }.padding(.top, -12)
+                            }
                         }
                     }
                 }
