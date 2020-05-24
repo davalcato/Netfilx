@@ -64,6 +64,37 @@ struct Home : View {
             }.padding()
             .background(Color("Color"))
             
+            Text("Netflix Prime").font(.title)
+            
+            ZStack{
+                
+                Image("top").resizable()
+                
+                VStack{
+                    
+                    Spacer()
+                    HStack{
+                        
+                        VStack(alignment: .leading, spacing: 10){
+                            
+                            Text("Marvel's The Defenders").font(.body)
+                            Text("Season 1").font(.caption)
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            
+                        }) {
+                            
+                            Image("play").renderingMode(.original)
+                            
+                        }
+                    }
+                }.padding(.bottom)
+                
+            }.frame(height: 190)
+            
         }.padding()
         .preferredColorScheme(.dark)
     }
