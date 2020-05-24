@@ -19,3 +19,33 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+struct Home : View {
+    
+    var body : some View{
+        
+        VStack(alignment: .leading, spacing: 20){
+            
+            HStack{
+                
+                Button(action: {
+                    
+                }) {
+                    
+                    Image("menu").renderingMode(.original)
+                }
+                
+                Image("logo")
+                
+                Spacer()
+                
+                Button(action: {
+                    
+                }) {
+                    
+                    Image("Notifications").renderingMode(.original)
+                }
+            }
+        }
+    }
+}
