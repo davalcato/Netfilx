@@ -64,36 +64,40 @@ struct Home : View {
             }.padding()
             .background(Color("Color"))
             
-            Text("Netflix Prime").font(.title)
-            
-            ZStack{
+            ScrollView(.vertical, showsIndicators: false) {
                 
-                Image("top").resizable()
+                Text("Netflix Prime").font(.title)
                 
-                VStack{
+                ZStack{
                     
-                    Spacer()
-                    HStack{
-                        
-                        VStack(alignment: .leading, spacing: 10){
-                            
-                            Text("Marvel's The Defenders").font(.body)
-                            Text("Season 1").font(.caption)
-                        }
+                    Image("top").resizable()
+                    
+                    VStack{
                         
                         Spacer()
-                        
-                        Button(action: {
+                        HStack{
                             
-                        }) {
+                            VStack(alignment: .leading, spacing: 10){
+                                
+                                Text("Marvel's The Defenders").font(.body)
+                                Text("Season 1").font(.caption)
+                            }
                             
-                            Image("play").renderingMode(.original)
+                            Spacer()
                             
+                            Button(action: {
+                                
+                            }) {
+                                
+                                Image("play").renderingMode(.original)
+                                
+                            }
                         }
-                    }
-                }.padding(.bottom)
+                    }.padding()
+                    
+                }.frame(height: 190)
                 
-            }.frame(height: 190)
+            }
             
         }.padding()
         .preferredColorScheme(.dark)
